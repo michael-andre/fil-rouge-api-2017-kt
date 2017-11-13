@@ -4,8 +4,19 @@ import fr.centralesupelec.sio.model.Movie;
 
 import java.util.List;
 
-public interface MoviesRepository {
+public abstract class MoviesRepository {
 
-    List<Movie> getMovies();
+    private static MoviesRepository sRepository;
+
+    public static MoviesRepository getInstance() {
+        if (sRepository == null) {
+            sRepository = new DummyMoviesRepository();
+        }
+        return sRepository;
+    }
+
+    protected MoviesRepository() { }
+
+    public abstract List<Movie> getMovies();
 
 }

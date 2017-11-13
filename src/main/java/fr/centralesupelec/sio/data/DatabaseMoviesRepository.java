@@ -4,7 +4,7 @@ import fr.centralesupelec.sio.model.Movie;
 
 import java.util.List;
 
-class DatabaseMoviesRepository implements MoviesRepository {
+class DatabaseMoviesRepository extends MoviesRepository {
 
     @Override
     public List<Movie> getMovies() {

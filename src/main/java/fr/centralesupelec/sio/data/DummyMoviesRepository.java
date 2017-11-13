@@ -5,7 +5,7 @@ import fr.centralesupelec.sio.model.Movie;
 import java.util.Arrays;
 import java.util.List;
 
-class DummyMoviesRepository implements MoviesRepository {
+class DummyMoviesRepository extends MoviesRepository {
 
     @Override
     public List<Movie> getMovies() {
