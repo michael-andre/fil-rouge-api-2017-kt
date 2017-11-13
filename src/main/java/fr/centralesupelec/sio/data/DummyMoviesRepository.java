@@ -11,8 +11,15 @@ class DummyMoviesRepository extends MoviesRepository {
     public List<Movie> getMovies() {
         Movie m1 = new Movie();
         m1.setTitle("Lord of the Rings");
-        m1.setId(007);
+        m1.setId(7);
         return Arrays.asList(m1);
     }
 
+    @Override
+    public Movie getMovie(long id) {
+        return getMovies().stream()
+                .filter(m -> m.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
 }

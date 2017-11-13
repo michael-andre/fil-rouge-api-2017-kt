@@ -19,4 +19,6 @@ public abstract class MoviesRepository {
 
     public abstract List<Movie> getMovies();
 
+    public abstract Movie getMovie(long id);
+
 }

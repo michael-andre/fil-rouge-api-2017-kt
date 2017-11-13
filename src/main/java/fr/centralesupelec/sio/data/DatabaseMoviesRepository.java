@@ -11,4 +11,8 @@ class DatabaseMoviesRepository extends MoviesRepository {
         return null;
     }
 
+    @Override
+    public Movie getMovie(long id) {
+        return null;
+    }
 }
