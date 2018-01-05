@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse
  * @throws IOException if the response cannot be written.
  */
 // This syntax (out of a class) defines an extension method.
-// The method will be "added" to any HttpServletResponse sharedInstance directly.
+// The method will be "added" to any HttpServletResponse instance directly.
 fun HttpServletResponse.writeJson(response: Any) {
     // This is strictly equivalent to setContentType(...)
     contentType = "application/json"
-    // TODO: Don't recreate a new Gson sharedInstance for each response, reuse
+    // TODO: Don't recreate a new Gson instance for each response, reuse
     val gson = GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()

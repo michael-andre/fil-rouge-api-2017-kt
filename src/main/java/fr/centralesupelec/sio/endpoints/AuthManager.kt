@@ -11,7 +11,7 @@ import io.jsonwebtoken.impl.TextCodec
  * The manager is in charge of generating access token when a user logs in, an to verify them afterward.
  * Tokens are JWTs (JSON Web Tokens): they are not encrypted (simply base-64 encoded), but their signature can be verified to check if they have be tempered.
  */
-// Defines an object available without sharedInstance creation.
+// Defines an object available without instance creation.
 // This is roughly equivalent to "static" in Java, which does not exist in Kotlin.
 object AuthManager {
 
